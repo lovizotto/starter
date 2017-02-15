@@ -1,0 +1,105 @@
+@function get-vw($target) {
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+// Colors Definition
+$gray: #5D717A;
+$lightest-gray: #FAFAFA;
+$light-purple: #573B81;
+$glossy-purple: #C06EFA;
+$solid-purple: #924B94;
+$dark-purple: #2C154D;
+$color-active: #A55DB9;
+$color-disable: #936498;
+$default-gradient: linear-gradient(-226deg, #573B81 0%, #924B94 100%);
+// Box
+$xs-gap: 4px;
+$sm-gap: 8px;
+$md-gap: 16px;
+$lg-gap: 32px;
+$xl-gap: 64px;
+$full-width: 100vw;
+$full-height: 100vh;
+$form-element-max-width: 320px;
+$gap-top: 67px;
+// Default Font
+$default-font: 'Roboto', sans-serif;
+$font-size: 14px;
+
+.montserrat-regular {
+  font-family: $default-font !important;
+  font-weight: normal !important;
+}
+
+.montserrat-bold {
+  font-family: $default-font !important;
+  font-weight: bold !important;
+}
+
+.montserrat-light {
+  font-family: $default-font !important;
+  font-weight: 300 !important;
+}
+
+
+// Generals
+input {
+  @extend .montserrat-light;
+  font-size: 14px !important;
+  letter-spacing: .8px;
+  border-radius: 0;
+  color: white;
+  background-color: transparent;
+  padding: $md-gap 0 $md-gap 2px;
+  border: none;
+  width: $full-width;
+  margin-top: $sm-gap !important;
+  max-width: $form-element-max-width;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+
+  color: rgba(255, 255, 255, .25);
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+  -webkit-appearance: none;
+}
+
+.btn {
+  @extend .montserrat-regular;
+  display: block;
+  border-radius: 50px;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  letter-spacing: 0.5px;
+  color: white;
+  background-image: $default-gradient;
+}
+
+.title-section {
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: $dark-purple;
+  line-height: 23px;
+}
+
+// Força elementos a ficarem centralizados
+.force-center {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+// Helper de background de icone
+.background-ico-right {
+  background-repeat: no-repeat;
+  background-position: calc(100% - 5px) center;
+}

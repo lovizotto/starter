@@ -1,0 +1,46 @@
+@import 'theme';
+
+.AppBar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: $full-width;
+  height: 67px;
+  font-family: $default-font;
+
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 67px;
+  font-size: 15px!important;
+  color: white;
+  background-image: $default-gradient;
+
+  &.inverted {
+    background: none;
+    font-size: 16px;
+    color:$dark-purple;
+  }
+
+  & .left {
+    position: absolute;
+    left: $sm-gap;
+    top: -$xs-gap;
+    text-align: left;
+    padding: $xs-gap;
+  }
+
+  & .right {
+    position: absolute;
+    right: $sm-gap;
+    top: -$xs-gap;
+    text-align: right;
+    padding: $xs-gap;
+    text-transform: none;
+  }
+
+  .AppBar-icons {
+    padding: $sm-gap;
+  }
+
+}

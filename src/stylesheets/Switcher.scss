@@ -1,0 +1,40 @@
+@import 'theme';
+
+.Switcher {
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+  border-radius: 60px;
+  background-color: #DF4344;
+
+
+  .control {
+    display: block;
+    margin:4.4px 5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: white;
+
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    -ms-transition: transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s;
+  }
+
+  &.active {
+
+    background-color: #47CB7A;
+
+    .control {
+      -webkit-transform: translate3D(27px,0,0);
+      -moz-transform: translate3D(27px,0,0);
+      -ms-transform: translate3D(27px,0,0);
+      -o-transform: translate3D(27px,0,0);
+      transform: translate3D(27px,0,0);
+    }
+
+  }
+
+}
